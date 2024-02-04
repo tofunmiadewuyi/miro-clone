@@ -41,7 +41,6 @@ export const EmptyFavourites = () => {
 export const EmptyBoards = () => {
 
     const { mutate, pending} = useApiMutation(api.board.create);
-    // const create = useMutation(api.board.create);
     const { organization } = useOrganization();
 
     const onClick = () => {
