@@ -18,6 +18,7 @@ export const OrgSidebar = () => {
     const searchParams = useSearchParams();
     const favourites = searchParams.get("favourites");
 
+
     return (
         <div className="hidden lg:flex flex-col space-y-6 w-[206px] pl-5 pt-5">
             <Link href={"/"}>
@@ -57,7 +58,7 @@ export const OrgSidebar = () => {
                 >
                     <Link href={{
                         pathname: "/",
-                        query: { favourites : true }
+                        query: { favourites: true }
                     }}>
                         <Star className="h-4 w-4 mr-2"/>
                         Favourite boards

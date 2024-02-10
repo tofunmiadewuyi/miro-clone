@@ -7,6 +7,8 @@ import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useOrganization } from "@clerk/nextjs";
 import { useApiMutation } from "@/hooks/use-api-mutation";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export const EmptySearch = () => {
     return(
@@ -40,6 +42,8 @@ export const EmptyFavourites = () => {
 
 export const EmptyBoards = () => {
 
+    const router = useRouter();
+
     const { mutate, pending} = useApiMutation(api.board.create);
     const { organization } = useOrganization();
 
@@ -49,6 +53,10 @@ export const EmptyBoards = () => {
         mutate({
             title: "Untitled",
             orgId: organization.id
+        })
+        .then((id) => {
+            toast.success("Board created");
+            router.push(`/board/${id}`)
         })
     }
 
