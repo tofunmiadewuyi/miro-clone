@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { useRenameModal } from "@/store/use-rename-modal";
 
 interface ActionsProps {
+
   children: React.ReactNode;
   side?: DropdownMenuContentProps["side"];
   sideOffset?: DropdownMenuContentProps["sideOffset"];
