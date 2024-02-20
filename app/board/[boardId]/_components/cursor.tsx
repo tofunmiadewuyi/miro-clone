@@ -45,4 +45,4 @@ export const Cursor = memo(({ connectionId }: CursorProps) => {
   )
 });
 
-//Cursor.displayName = "Cursor"
+Cursor.displayName = "Cursor"

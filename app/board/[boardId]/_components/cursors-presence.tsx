@@ -29,4 +29,4 @@ export const CursorsPresence = memo(() => {
     );
 });
 
-// CursorsPresence.displayName = "CursorsPresence"
+CursorsPresence.displayName = "CursorsPresence"
